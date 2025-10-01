@@ -1,0 +1,14 @@
+{{define "title"}} title {{end}}
+
+{{ define "body" }}
+<h1>{{ .Title }}</h1>
+<ul>
+    {{ range .TodoList }}
+        {{ if .Done }}
+            <li type="1">Done {{ .Name }}</li>
+        {{ else }}
+            <li type="1">{{ .Name }}</li>
+        {{end}}
+    {{ end }}
+</ul>
+{{end}}
